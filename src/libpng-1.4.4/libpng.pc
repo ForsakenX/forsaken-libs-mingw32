@@ -1,0 +1,10 @@
+prefix=/home/daquino/stuff/px/src/mingw/src/libpng-1.4.4/../../
+exec_prefix=/home/daquino/stuff/px/src/mingw/src/libpng-1.4.4/../../
+libdir=/home/daquino/stuff/px/src/mingw/src/libpng-1.4.4/../..//lib
+includedir=/home/daquino/stuff/px/src/mingw/src/libpng-1.4.4/../..//include/libpng14
+
+Name: libpng
+Description: Loads and saves PNG files
+Version: 1.4.4
+Libs: -L${libdir} -lpng14 -lz -lm
+Cflags: -I${includedir}
