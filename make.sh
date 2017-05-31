@@ -26,4 +26,4 @@ if ! regex_match "$*" "\bCC="; then
 		exit 1
 	fi
 fi
-make MINGW=1 $flags "$@"
+make MINGW=1 M32=1 $flags "$@"
