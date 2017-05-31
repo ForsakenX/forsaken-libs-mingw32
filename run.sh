@@ -10,5 +10,10 @@ cd "$(dirname -- "$0")/.."
 : ${SKELETON:="$PWD/../skeleton"}
 [[ -d $SKELETON ]] && cd "$skeleton"
 
+if ! [[ -e OpenAL32.dll ]] || ! [[ -e SDL.dll ]]; then
+	echo "WARNING: You need to make sure that OpenAL32/SDL.dll are in your system"
+	echo "WARNING: You can easily do this by runnig \`ln -sf mingw/bin/*dll .\`"
+fi
+
 projectx="$PWD/projectx"
 wine "$projectx" "$@"
