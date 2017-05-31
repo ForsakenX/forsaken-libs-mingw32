@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ $(dirname -- "$0" | awk -F'/' '{print $NF}') != mingw ]]; then
+	echo "ERROR: The mingw folder must be named 'mingw'"
+	exit 1
+fi
 cd "$(dirname -- "$0")/.."
 export PKG_CONFIG_PATH="$PWD/mingw/lib/pkgconfig"
 function regex_match { [[ $1 =~ $2 ]]; }
