@@ -17,8 +17,13 @@ if ! regex_match "$*" "\bCC="; then
 	cc=$(which $versions 2>/dev/null | tail -n 1)
 	if [[ $cc ]]; then
 		flags="CC=$cc"
+		echo
 		echo "Auto detected: $flags"
 		echo "You can override this on the command line if desired."
+		echo
+	else
+		echo "ERROR: You must set a gcc version to compile with: flags=$flags"
+		exit 1
 	fi
 fi
 make MINGW=1 $flags "$@"
