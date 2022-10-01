@@ -1,12 +1,15 @@
 # Libraries required to build Forsaken with mingw32
 
-This folder contains all prebuilt shared/static libraries ready to go and header files.
+This folder contains all required win32 libraries ready to go.
 
-The src folder contains all the sources.
+The plan is to eventually merge it into the other forsaken-libs folder.
 
-  Note that this project will eventually be merged into https://github.com/ForsakenX/forsaken-libs which builds everything from scrach using patch files.
 
-## General procedure to rebuild is:
+# Rebuilding
+
+Everything is already built and ready to go so there is no need to rebuild.
+
+In the event that you want to rebuild you can follow this as a general guide:
 
 ```shell
 autoreconf -vfi
@@ -18,7 +21,7 @@ make install
 
 Be carefull running ./configure cause it will destroy the custom changes that were required to make the libraries build.
 
-When tweaking the make files make sure you use mingw binaries.
+When tweaking the make files make sure you use the mingw binaries to build.
 
 Some examples:
 
