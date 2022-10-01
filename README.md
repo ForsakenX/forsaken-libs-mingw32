@@ -5,6 +5,15 @@ This folder contains all required win32 libraries ready to go.
 The plan is to eventually merge it into the other forsaken-libs folder.
 
 
+
+# Setup
+
+This folder by convention used everywhere else should be named `mingw` instead of `libs`.
+
+See: [Quick-and-easy-dev-setup](https://github.com/ForsakenX/forsaken/wiki/Quick-and-easy-dev-setup).
+
+
+
 # Rebuilding
 
 Everything is already built and ready to go so there is no need to rebuild.
